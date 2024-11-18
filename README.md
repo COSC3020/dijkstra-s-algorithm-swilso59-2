@@ -24,7 +24,33 @@ inefficient.
 What is the big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
 
+## Answer
 
+The $\Theta$ complexity of my implementation can be determined by reviewing the different sections of the code.
 
+- Check if the graph is empty
+    - obtains all the nodes in the graph which takes $V$ time were $V$ is the number of vertices 
+- Initialize the distance to each node
+    - Each node's distance is set to Infinity and source node to $0$, which takes $V$ time since we iterate through each vertex
+- Track unvisted nodes
+    - puts all vertices in a set which takes $V$ time 
+- Main loop (while loop)
+    - The while loop runs $V$ times once per vertex.  
+- Select the unvisted node with the smallest distance (nested for loop)
+    - For each iteration of the while loop the for loop iterates over each unvisted node to find the one with the smallest distance
+    - In the worst case we would need to iterate over $V$ nodes
+- Removing vertex from unvisted set
+    - Removing a node from the set takes constant time
+    - Once for each iteration in the while loop gives us $V$ nodes that get removed
+- For loop (nested loop updates the distance of neighbors)
+    - This for loop iterates over all the neighbors of the current node v
+    - Each edge in the graph is processed exactly once across all iterations The leaves us with $E$ where $E$ is the number of edges 
+- Total time complexity $T(n) \in \Theta (V^{2} + E)$
 
-https://patrickkarsh.medium.com/dijkstras-shortest-path-algorithm-in-javascript-1621556a3a15
+I started this assignment by reviewing the lecture notes and attempting to use the pseudocode provided. I had gotten stuck in a few places where I used this https://patrickkarsh.medium.com/dijkstras-shortest-path-algorithm-in-javascript-1621556a3a15 to help me work through the implementation. I also looked at a few of the other students repositories listed below.  
+
+https://github.com/COSC3020/dijkstra-s-algorithm-AndonM
+
+https://github.com/COSC3020/dijkstra-s-algorithm-kbuss26
+
+https://github.com/COSC3020/dijkstra-s-algorithm-IshitaPatel18
