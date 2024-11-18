@@ -45,7 +45,7 @@ The $\Theta$ complexity of my implementation can be determined by reviewing the 
 - For loop (nested loop updates the distance of neighbors)
     - This for loop iterates over all the neighbors of the current node v
     - Each edge in the graph is processed exactly once across all iterations The leaves us with $E$ where $E$ is the number of edges 
-- Total time complexity $T(n) \in \Theta (V^{2} + E)$
+- Time complexity $T(n) \in \Theta (V^{2} + E)$
 
 I started this assignment by reviewing the lecture notes and attempting to use the pseudocode provided. I had gotten stuck in a few places where I used this https://patrickkarsh.medium.com/dijkstras-shortest-path-algorithm-in-javascript-1621556a3a15 to help me work through the implementation. I also looked at a few of the other students repositories listed below to get an idea of the analysis and testing along with setting up the testing to run automatically.  
 
